@@ -5,7 +5,7 @@ import { Container, Divider  } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-promise';
 import { Arrays } from './Arrays';
-import * as dataJson from '/team.json';
+import dataJson from '/team.json';
 
 const uniqueArray = [];
 const y = [];
@@ -56,29 +56,20 @@ export class Race extends React.Component {
                 <p>  The last one is the loser </p>
                 {racers.map((racer, index)=> (
                     <Arrays avatar={dataJson[racer].avatar_url} color={colors[index]} />
-
-                ))}
-                    <Arrays avatar = { dataJson[uniqueArray[0]].avatar_url } color="#F3D700" />
-                    <Arrays avatar = { dataJson[uniqueArray[1]].avatar_url } color="#B513EC" />
-                    <Arrays avatar = { dataJson[uniqueArray[2]].avatar_url } color="#FE8A76" />
-                    <Arrays avatar = { dataJson[uniqueArray[3]].avatar_url } color="#008280" />
-                    <Arrays avatar = { dataJson[uniqueArray[4]].avatar_url } color="#0E5EB8" />
-                    
+                ))}   
                 </div>
             );
         } else  if(this.props.start) {
+            const colors = ["F3D700", "#B513EC", "#FE8A76", "#008280", "#0E5EB8" ];
             return (
                 <div className="App-field">
-                    <Arrays avatar = { dataJson[y[0]].avatar_url } color="#FFD700" />
-                    <Arrays avatar = { dataJson[y[1]].avatar_url } color="#B413EC" />
-                    <Arrays avatar = { dataJson[y[2]].avatar_url } color="#FE9A76" />
-                    <Arrays avatar = { dataJson[y[3]].avatar_url } color="#008080" />
-                    <Arrays avatar = { dataJson[y[4]].avatar_url } color="#0E6EB8" />
-                    
+                <p>  The last one is the loser </p>
+                {racers.map((racer, index)=> (
+                    <Arrays avatar={dataJson[racer].avatar_url} color={colors[index]} />
+                ))}   
                 </div>
-            );
+            );     
         }else{ 
-        
             const r = this.state.nextRacers;
             const lineup = r.map((list) => 
                 <li className="Race-racers">
