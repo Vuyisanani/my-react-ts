@@ -6,6 +6,8 @@ import 'semantic-ui-css/semantic.min.css';
 import 'react-promise';
 import { Arrays } from './Arrays';
 import dataJson from '/team.json';
+// import { withStyles } from 'material-ui/styles';
+// import { LinearProgress } from 'material-ui/Progress';
 
 const uniqueArray = [];
 const y = [];
@@ -16,15 +18,12 @@ while(uniqueArray.length < 5){
     }
     uniqueArray.push(unique);
 }
-
 const prom = new Promise( (resolve, reject) =>{
     setTimeout(() =>{
       resolve(dataJson);
       reject(Error);
     }, 100)
 })
-
-// Race Component
 export class Race extends React.Component { 
     constructor(props){
         super(props);
@@ -36,7 +35,6 @@ export class Race extends React.Component {
             this.setState({Arrays: value.map(({ id, login }) => ({ key: id, value: login, text: login }))})
         })
     }
-
     handleChange = (e, { key, value }) => {
         const x = dataJson.map(({login, id})=>({key:id, value: login}))
         const index = x.findIndex(m => m.value === value); 
@@ -45,11 +43,10 @@ export class Race extends React.Component {
         this.setState({ key, value });
         this.state.nextRacers.push({value});
     }
-
     render() {
-        const { value }  = this.state;
+        const {value}  = this.state;
 
-        if(this.props.startRandom) { // random selection
+        if(this.props.startRandom) { 
              const colors = ["F3D700", "#B513EC", "#FE8A76", "#008280", "#0E5EB8" ];
             return (
                 <div className="App-field">
@@ -92,9 +89,9 @@ export class Race extends React.Component {
                             </Container>
                         </div>
                         
-                        {/* <div className="App-Arrays">
+                        <div className="App-Arrays">
                             <ul>{lineup}</ul>
-                        </div>    */}
+                        </div>   
                     </div> 
                 </div>  
             );

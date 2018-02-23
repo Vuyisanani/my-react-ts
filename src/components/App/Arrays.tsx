@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+// import * as React, { Component, Props } from 'react';
+import * as React from 'react';
 import Progress from 'react-progressbar';
 
-export class Arrays extends Component {
-
+export class Arrays extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-          interval: Math.floor(Math.random() * 200),
-          progress:  0,
+        interval: Math.floor(Math.random() * 200),
+        
+        progress:  0,
         }
     }
-
-
     componentDidMount = () => {
         this.interval = setInterval(this.timer, this.state.interval);
     }
