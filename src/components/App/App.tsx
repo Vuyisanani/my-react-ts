@@ -4,7 +4,6 @@ import './App.css';
 interface Props {
 	samplePropProp?: string;
 }
-
 interface State {
 	sampleStateProp?: string;
 }
