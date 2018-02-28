@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './App.css';
+import Progress from 'react-progressbar';
 
 interface Props {
 	samplePropProp?: string;
@@ -21,9 +22,19 @@ export class App extends React.Component<Props, State> {
 					<h2 className="App-sub-title" > Typescript Project </h2>
 				</header>
 				<p className="App-intro" >
-					To get started, edit <code> src / components / App / App.tsx </code> and save to reload.
+					 <code> The Horse Race Challenge </code> 
 				</p>
+				<div className="App-lane">
+                     <Progress className="App-progress"/>
+                 </div>
+				 <div className="App-lane">
+                     <Progress className="App-progress"/>
+                 </div>
+				 <div className="App-lane">
+                     <Progress className="App-progress"/>
+                 </div>
 			</div>
+			
 		);
 	}
 }

@@ -12,14 +12,14 @@
 		"ban": false,
 		"class-name": true,
 		"comment-format": [
-			true,
+			false,
 			"check-space"
 		],
 		"curly": true,
 		"eofline": false,
 		"forin": true,
 		"indent": [
-			true,
+			false,
 			"tabs",
 			4
 		],
@@ -97,7 +97,7 @@
 			"property-declaration"
 		],
 		"typedef-whitespace": [
-			true,
+			false,
 			{
 				"call-signature": "nospace",
 				"index-signature": "nospace",
@@ -114,7 +114,7 @@
 			"allow-pascal-case"
 		],
 		"whitespace": [
-			false,
+			true,
 			"check-branch",
 			"check-decl",
 			"check-module",
