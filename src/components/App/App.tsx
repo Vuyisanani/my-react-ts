@@ -1,9 +1,12 @@
+/// <reference path="../../modules.d.ts" />
 import * as React from 'react';
 import './App.css';
 import Progress from 'react-progressbar';
+// import dataJson from '/team.json';
 
 interface Props {
 	samplePropProp?: string;
+
 }
 interface State {
 	sampleStateProp?: string;
@@ -33,6 +36,7 @@ export class App extends React.Component<Props, State> {
 				 <div className="App-lane">
                      <Progress className="App-progress"/>
                  </div>
+
 			</div>
 			
 		);
