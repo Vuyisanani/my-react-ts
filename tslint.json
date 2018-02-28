@@ -20,7 +20,8 @@
 		"forin": true,
 		"indent": [
 			true,
-			"tabs"
+			"tabs",
+			4
 		],
 		"interface-name": [
 			true,
@@ -113,7 +114,7 @@
 			"allow-pascal-case"
 		],
 		"whitespace": [
-			true,
+			false,
 			"check-branch",
 			"check-decl",
 			"check-module",
