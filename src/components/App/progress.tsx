@@ -13,13 +13,13 @@
 //     state = {
 //         completed: 0, 
 //     };
-//     componentDidMount(){
-//         this.timer = setInterval(this.progress, 500);
-//     }
-//     componentWillUnmount(){
-//         clearInterval(this.timer);
-//     }
-//     timer = null;
+//     // componentDidMount(){
+//     //     this.timer = setInterval(this.progress, 500);
+//     // }
+//     // componentWillUnmount(){
+//     //     clearInterval(this.timer);
+//     // }
+//     // timer = null;
 
 //     progress = ()=> {
 //         const { completed } = this.state ;
